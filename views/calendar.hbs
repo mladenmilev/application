@@ -19,7 +19,7 @@
 
 <div class="row">
 
-  <div class="col-md-3 top-leave-type-statistics">
+  <div class="col-md-4 top-leave-type-statistics">
     <dl>
       {{#with current_user }}
       <dt>{{ this.calculate_number_of_days_available_in_allowance ../this_year }}</dt>
@@ -30,7 +30,7 @@
   </div>
 
 
-  <div class="col-md-3 secondary-leave-type-statistics hidden-xs">
+  <div class="col-md-4 secondary-leave-type-statistics hidden-xs">
     <dl>
       <dt>Used so far</dt>
 
@@ -45,16 +45,7 @@
     </dl>
   </div>
 
-  <div class="col-md-3 secondary-leave-type-statistics hidden-xs">
-    <dl>
-      <dt>Available types</dt>
-        {{~# each full_leave_type_statistics ~}}
-          <dd>{{this.leave_type.name ~}}{{~# if this.limit }} (up to {{this.limit}} days){{~/if}} </dd>
-        {{~/ each}}
-    </dl>
-  </div>
-
-  <div class="col-md-3 secondary-leave-type-statistics hidden-xs">
+  <div class="col-md-4 secondary-leave-type-statistics hidden-xs">
     <dl>
       <dt>Details</dt>
       <dd><em>Superviser:</em><span class="pull-right"><a href="mailto:{{superviser.email}}">{{# with superviser }}{{ this.full_name }}{{/with}}</a></span></dd>
