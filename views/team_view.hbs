@@ -9,6 +9,19 @@
 
 {{> show_flash_messages }}
 
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    {{# if current_department }}{{current_department.name}}{{else}}All departments{{/if}}
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="?{{> team_view_url_parameters current_department = null }}">All</a></li>
+    {{#each related_departments}}
+    <li><a href="?{{> team_view_url_parameters base_date = ../base_date current_department = this }}">{{this.name}}</a></li>
+    {{/each}}
+  </ul>
+</div>
+
 <div class="row">&nbsp;</div>
 
 <nav>
@@ -23,25 +36,12 @@
   </div>
 </nav>
 
-<div class="row">&nbsp;</div>
-
 <div class="row clearfix">
   <div class="col-md-2">
     <table class="team-view-users">
       <tr><td class="team-view-header">
 
-        <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            {{# if current_department }}{{current_department.name}}{{else}}All departments{{/if}}
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li><a href="?{{> team_view_url_parameters current_department = null }}">All</a></li>
-            {{#each related_departments}}
-            <li><a href="?{{> team_view_url_parameters base_date = ../base_date current_department = this }}">{{this.name}}</a></li>
-            {{/each}}
-          </ul>
-        </div>
+
 
       </td></tr>
     {{# each users_and_leaves}}
