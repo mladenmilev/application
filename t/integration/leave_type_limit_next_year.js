@@ -57,7 +57,7 @@ describe('Leave type limits for next year: ' + next_year, function(){
 
   it("Open page with leave types", function(done){
     open_page_func({
-      url    : application_host + 'settings/general/',
+      url    : application_host + 'system_settings/general/',
       driver : driver,
     })
     .then(function(){ done() });

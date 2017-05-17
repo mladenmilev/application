@@ -10,7 +10,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="{{url_to_the_site_root}}">{{logged_user.company.name}} Absence System</a>
+      <a class="navbar-brand" href="{{url_to_the_site_root}}">{{logged_user.company.name}} TimeOff.Management</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -36,9 +36,9 @@
             <li class="dropdown hidden-xs">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="fa fa-gears"></span> <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="/settings/general/">General</a></li>
-                <li><a href="/settings/departments/">Departments</a></li>
-                <li><a href="/settings/company/authentication/">LDAP configuration</a></li>
+                <li><a href="/system_settings/general/">General</a></li>
+                <li><a href="/system_settings/departments/">Departments</a></li>
+                <li><a href="/system_settings/company/authentication/">LDAP configuration</a></li>
                 <li><a href="/audit/email/">Emails audit</a></li>
               </ul>
             </li>
@@ -48,6 +48,7 @@
             <li class="dropdown hidden-xs">
               <a id="me_menu" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Me <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
+                <li><a href="/user_settings/change_password/">Settings</a></li>
                 <li><a href="/requests/">Requests</a></li>
                 <li class="hidden-xs"><a href="/calendar/feeds/">Feeds</a></li>
                 <li><a href="/logout/">Logout</a></li>

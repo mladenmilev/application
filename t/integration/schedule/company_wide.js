@@ -41,7 +41,7 @@ describe("Changing default company wide schedule", function(){
 
   it("Open company details page", function(done){
     open_page_func({
-      url    : application_host + 'settings/general/',
+      url    : application_host + 'system_settings/general/',
       driver : driver,
     })
     .then(function(){ done() });
@@ -265,7 +265,7 @@ describe('Leave request reflects shanges in company schedule', function(){
 
   it("Open company details page", function(done){
     open_page_func({
-      url    : application_host + 'settings/general/',
+      url    : application_host + 'system_settings/general/',
       driver : driver,
     })
     .then(function(){ done() });

@@ -20,7 +20,7 @@
         <div class="row">
 
           <div class="col-md-5">
-            <form class="form-horizontal" method="POST" action="/settings/company/" id="company_edit_form">
+            <form class="form-horizontal" method="POST" action="/system_settings/company/" id="company_edit_form">
               <div class="form-group">
                 <label for="input_company_name" class="col-md-4 control-label">Company name</label>
                 <div class="col-md-8">
@@ -70,7 +70,7 @@
           </div>
 
           <div class="col-md-offset-1 col-md-5">
-            <form class="form-horizontal" method="POST" action="/settings/company/export/" id="company_export_form">
+            <form class="form-horizontal" method="POST" action="/system_settings/company/export/" id="company_export_form">
               <div class="form-group">
                 <label for="export_company_btn" class="col-md-6 control-label">Export company data</label>
                 <div class="col-md-6">
@@ -87,7 +87,7 @@
 
             <div class="form-group">&nbsp;</div>
 
-            <form class="form-horizontal" method="POST" action="/settings/schedule" id="company_schedule_form">
+            <form class="form-horizontal" method="POST" action="/system_settings/schedule" id="company_schedule_form">
             <input type="hidden" name="company_wide" value="1">
             <div class="form-group">
               <label for="" class="col-md-6 control-label">Company week schedule</label>
@@ -125,8 +125,8 @@
         Bank Holidays
       </div>
       <div class="panel-body">
-        <form id="delete_bankholiday_form" method="post" action="/settings/bankholidays/delete/"></form>
-        <form id="update_bankholiday_form" method="post" action="/settings/bankholidays/">
+        <form id="delete_bankholiday_form" method="post" action="/system_settings/bankholidays/delete/"></form>
+        <form id="update_bankholiday_form" method="post" action="/system_settings/bankholidays/">
 
         <div class="row">
           <div class="col-md-6"><label class="control-label">Holiday Name</label></div>
@@ -198,8 +198,8 @@
 
         <div class="row">&nbsp;</div>
 
-        <form id="delete_leavetype_form" method="post" action="/settings/leavetypes/delete/"></form>
-        <form id="leave_type_edit_form" method="post" action="/settings/leavetypes/">
+        <form id="delete_leavetype_form" method="post" action="/system_settings/leavetypes/delete/"></form>
+        <form id="leave_type_edit_form" method="post" action="/system_settings/leavetypes/">
 
         {{# unless company.leave_types.length }}
         <div class="row">
@@ -249,13 +249,13 @@
 
 {{> add_new_bank_holiday_modal
   container_id='add_new_bank_holiday_modal'
-  form_action='/settings/bankholidays/'
+  form_action='/system_settings/bankholidays/'
 }}
 
 
 {{> add_new_leave_type_modal
   container_id='add_new_leave_type_modal'
-  form_action='/settings/leavetypes/'
+  form_action='/system_settings/leavetypes/'
 }}
 
 {{> footer }}

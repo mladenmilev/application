@@ -105,13 +105,18 @@ app.use(
 );
 
 app.use(
-  '/settings/',
-  require('./lib/route/settings.js')
+  '/system_settings/',
+  require('./lib/route/system_settings.js')
+);
+
+app.use(
+  '/user_settings/',
+  require('./lib/route/user_settings.js')
 );
 
 app.use(
   '/users/',
-  require('./lib/route/users.js')
+  require('./lib/route/users_admin.js')
 );
 
 app.use(

@@ -69,26 +69,8 @@
     <span id="end_date_help" class="help-block col-md-6"><div>Date when user quits the {{ company.name }}.</div><div>After this date user is not able to access the company.</div><div>This is a way of deactivating user accounts.</div></span>
   </div>
 
-  <div class="form-group">
-    <label for="password_inp" class="col-md-3 control-label">Password</label>
-    <div class="col-md-3 date">
-      <input class="form-control" id="password_inp" type="password" name="password_one" required value="" {{#if company.ldap_auth_enabled}} readonly {{/if}} aria-describedby="password_inp_help">
-    </div>
-    <span id="password_inp_help" class="help-block col-md-6">
-      {{# if company.ldap_auth_enabled }}
-        <a href="/settings/company/authentication/">LDAP authentication</a> is enabled, so that password does not matter.
-      {{else}}
-        Define user's password.
-      {{/ if}}
-    </span>
-  </div>
+{{> user_password }}
 
-  <div class="form-group">
-    <label for="password_inp" class="col-md-3 control-label">Confirm password</label>
-    <div class="col-md-3">
-      <input class="form-control" id="confirm_password_inp" type="password" name="password_confirm" required value="" {{# if company.ldap_auth_enabled}}readonly{{/if}}>
-    </div>
-  </div>
 
   <div class="form-group">
     <div class="col-md-offset-3 col-md-3">

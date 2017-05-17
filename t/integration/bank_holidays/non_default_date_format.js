@@ -47,7 +47,7 @@ describe('Try to manage Bank holidays with non-default date format', function(){
 
   it("Open page with bank holidays", function(done){
     open_page_func({
-      url    : application_host + 'settings/general/',
+      url    : application_host + 'system_settings/general/',
       driver : driver,
     })
     .then(function(){done()});
@@ -198,7 +198,7 @@ describe("Try to use DD/MM/YY and some missleading date", function(){
   it("Open general settings page", function(done){
     driver.call(function(){
       open_page_func({
-        url    : application_host + 'settings/general/',
+        url    : application_host + 'system_settings/general/',
         driver : driver,
       })
       .then(function(){ done() });

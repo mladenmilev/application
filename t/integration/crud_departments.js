@@ -33,7 +33,7 @@ describe('CRUD for departments', function(){
 
   it("Open page for editing company details", function(done){
     open_page_func({
-      url    : application_host + 'settings/departments/',
+      url    : application_host + 'system_settings/departments/',
       driver : driver,
     })
     .then(function(){ done() });

@@ -20,9 +20,9 @@
 
 <div class="row">&nbsp;</div>
 
-<form id="delete_form" method="post" action="/settings/departments/delete/"></form>
+<form id="delete_form" method="post" action="/system_settings/departments/delete/"></form>
 
-<form method="post" action="/settings/departments/" id="edit_department_form">
+<form method="post" action="/system_settings/departments/" id="edit_department_form">
 
 {{# unless departments.length }}
 <div class="row">
@@ -84,7 +84,7 @@
 
 {{> add_new_department_modal
   container_id='add_new_department_modal'
-  form_action='/settings/departments/'
+  form_action='/system_settings/departments/'
 }}
 
 {{> footer }}

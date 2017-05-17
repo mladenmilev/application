@@ -34,7 +34,7 @@ describe('CRUD for bank holidays', function(){
 
   it("Open page with bank holidays", function(done){
     open_page_func({
-      url    : application_host + 'settings/general/',
+      url    : application_host + 'system_settings/general/',
       driver : driver,
     })
     .then(function(){done()});

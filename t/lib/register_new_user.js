@@ -163,7 +163,7 @@ var register_new_user_func = Promise.promisify( function(args, callback){
     // open company general configuration page and set the default format to be as requested
     driver.call(function(){
       return open_page_func({
-        url    : application_host + 'settings/general/',
+        url    : application_host + 'system_settings/general/',
         driver : driver,
       })
     });

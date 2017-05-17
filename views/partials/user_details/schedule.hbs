@@ -1,7 +1,7 @@
 
 <div class="col-md-9">
 
-  <form method="POST" action="/settings/schedule" id="company_schedule_form">
+  <form method="POST" action="/system_settings/schedule" id="company_schedule_form">
   <input type="hidden" name="user_id" value="{{employee.id}}">
 
   <div class="form-group">
@@ -12,7 +12,7 @@
       {{# if (is_user_specific) }}
         Current employee has <strong data-vpp="declare-user-specific-schedule">custom</strong> schedule.
       {{else}}
-        Current employee uses <strong><a data-vpp="link-to-company-schedule" href="/settings/general/">company wide</a></strong> schedule.
+        Current employee uses <strong><a data-vpp="link-to-company-schedule" href="/system_settings/general/">company wide</a></strong> schedule.
       {{/if}}
       {{/with}}
     </p>

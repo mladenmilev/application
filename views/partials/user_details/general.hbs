@@ -60,7 +60,7 @@
       <input class="form-control" id="password_inp" type="password" name="password_one" value="" {{#if company.ldap_auth_enabled}} readonly {{/if}} aria-describedby="password_inp_help">
       <span id="password_inp_help" class="help-block">
         {{# if company.ldap_auth_enabled }}
-          <a href="/settings/company/authentication/">LDAP authentication</a> is enabled, so that password does not matter.
+          <a href="/system_settings/company/authentication/">LDAP authentication</a> is enabled, so that password does not matter.
         {{else}}
           It is possible to update password for given account.
         {{/ if}}

@@ -46,7 +46,7 @@ describe('Try to remove used leave type', function(){
 
   it("Open page with leave types", function(done){
     open_page_func({
-      url    : application_host + 'settings/general/',
+      url    : application_host + 'system_settings/general/',
       driver : driver,
     })
     .then(function(){ done() });
@@ -131,7 +131,7 @@ describe('Try to remove used leave type', function(){
 
   it("Open page with leave types", function(done){
     open_page_func({
-      url    : application_host + 'settings/general/',
+      url    : application_host + 'system_settings/general/',
       driver : driver,
     })
     .then(function(){ done() });
